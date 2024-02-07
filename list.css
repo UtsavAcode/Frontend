@@ -41,4 +41,12 @@
     outline: none;
     margin-left: 20px;
 }
-////
+
+.dateTime{
+    text-align: center;
+}
+
+.day{
+    font-family: 'Cedarville Cursive', cursive;
+    
+}
