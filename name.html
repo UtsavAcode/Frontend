@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .word {
+    display: none;
+  }
+  
+  .word.active {
+    display: inline-block;
+    animation: changeColor 2s linear infinite;
+  }
+  
+  @keyframes changeColor {
+    0%, 100% { color: #FF6347; }
+    25% { color: #6495ED; }
+    50% { color: #7FFF00; }
+    75% { color: #FFD700; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li class="word">I am</li>
+      <li class="word">Utsav</li>
+      <li class="word">a Freelancer</li>
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const words = document.querySelectorAll('.word');
+
+      function displayWord(index) {
+        words.forEach(function(word, i) {
+          if (i === index) {
+            word.classList.add('active');
+          } else {
+            word.classList.remove('active');
+          }
+        });
+      }
+
+      let currentIndex = 0;
+      setInterval(function() {
+        displayWord(currentIndex);
+        currentIndex = (currentIndex + 1) % words.length;
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
