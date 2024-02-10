@@ -26,8 +26,33 @@
 }
 
 .row{
-    width: 100%;
+ 
 }
+
+.check{
+    display: flex;
+    align-items: center;
+}
+
+.check label{
+    cursor: pointer;
+    display: flex;
+}
+
+.check input[type="checkbox"]{
+    cursor: pointer;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.check .label::before{
+    content: '';
+    width: 1em;
+    height: 1em;
+    border: 0.5em solid black; 
+}
+
+
 
 #firstRow{
     margin-top: 15px;
@@ -35,11 +60,12 @@
 .line{
     width: 90%;
     padding: 10px;
+  
     border-style: none;
     border-bottom: 2px solid black;
     font-size:20px;
     outline: none;
-    margin-left: 20px;
+ 
 }
 
 .dateTime{
