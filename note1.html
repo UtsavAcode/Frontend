@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .notebook {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            position: relative; /* To position the pencil */
+        }
+
+        .date {
+            font-weight: bold;
+            color: #6b5b95; /* Dark blue color */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #404040; /* Dark gray color */
+        }
+
+        .pencil {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="notebook">
+        <div class="date">03.02.2020 - Monday</div>
+        <ul>
+            <li>Eng 101 tutorial</li>
+            <li>Econ 210 lecture</li>
+            <li>Meet with Biology pres. group</li>
+            <li>Lunch with Sam</li>
+            <li>Biology 120 lecture</li>
+            <li>Work</li>
+        </ul>
+        <img src="pencil.png" alt="Pencil" class="pencil">
+    </div>
+</body>
+</html>
