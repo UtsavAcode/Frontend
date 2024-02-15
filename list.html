@@ -13,29 +13,20 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
 />
-
+<link rel="stylesheet" href="https://coolors.co/fde8e9-e3bac6">
 </head>
 <body>
     <div class="container">
         <div class="page">
             <h1 class="heading">To DO List</h1>
             <p class="dateTime">2070/08/20: <span class="day">Monday</span></p>
-            
- <div class="row">
-    <div class="check">
-        <input type="checkbox" id="cb1">
-        <label for="cb1"></label>
-     
-        <input type="text" class="line" readonly value="new">
-    </div>
-</div>
 
  <div class="row">
      <div class="check">
         <input type="checkbox" id="cb2">
         <label for="cb2"></label>
        
-        <input type="text" class="line" value="new1">
+        <input type="text" class="line">
     </div>    
 </div>
 
@@ -108,39 +99,6 @@
 </div>
 
 
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    const inputValues = ["newTyped js animation", "new1", "new2"]; // Add more values as needed
-
-    function wait(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-    }
-
-    async function startTypingAnimation() {
-        const textElements = document.querySelectorAll(".line");
-
-        for (let i = 0; i < textElements.length; i++) {
-            const element = textElements[i];
-            const value = inputValues[i];
-
-            await new Typed(element, {
-                strings: [value],
-                typeSpeed: 150,
-                backSpeed: 150,
-                backDelay: 900,
-                loop: false,
-            }).promise;
-
-            await wait(1000); // Adjust the delay as needed
-        }
-
-        // Restart the animation after all texts are displayed
-        startTypingAnimation();
-    }
-
-    // Start the animation when the page loads
-    window.addEventListener("load", startTypingAnimation);
-</script>
 
 
 </body>

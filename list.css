@@ -20,6 +20,7 @@
     height: 100vh;
     background-color: white;
     border-bottom: none;
+    background-color: #E3E7AF;
 }
 .heading{
     text-align: center;
@@ -58,7 +59,7 @@
 
 .check label:hover::before,
 .check input[type="checkbox"]:hover + label::before{
-    background-color: #35E07D;
+    background-color: #E3E7AF;
 }
 
 .check input[type='checkbox']:focus +label::before{
@@ -75,8 +76,9 @@
 } 
 
 
-#firstRow{
-    margin-top: 15px;
+.row{
+    margin-right: 20px;
+    background-color: #E3E7AF;
 }
 
 
@@ -88,6 +90,9 @@
     border-bottom: 2px solid black;
     font-size:20px;
     outline: none;
+    position: relative;
+    background-color: #E3E7AF;
+    margin-left: 0px;
 
   
 }
@@ -102,6 +107,7 @@
     font-family: 'Cedarville Cursive', cursive;
     
 }
+
 
 
 /* this is supposed to be an animation */
