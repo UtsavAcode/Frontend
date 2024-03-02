@@ -23,7 +23,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color:rgb(244, 232, 232);
+    /* background-color:rgb(244, 232, 232); */
+    background-color: hsl(31, 86%, 83%);
     font-family: 'Young Serif', serif;
     text-align: center;
     display: flex;
@@ -38,8 +39,8 @@
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    border-radius: 10px;
-    padding: 12px;
+    border-radius: 20px;
+    padding: 19px;
   }
   .img-container img{
     width: 670px;
@@ -60,7 +61,7 @@
 
   .prepare-section{
     
-    background-color: #f7d5d5;
+    background-color:  hsla(330, 86%, 89%, 0.197);
     border-radius:5px ;
     /* font-family: Outfit; */
     font-family: roboto; 
@@ -179,10 +180,44 @@
 #fat,#g{
   border-bottom: none;
 }
+#g, #tds{
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+
 
 .list-details{
   padding: 0;
-  margin-left: 3px;
+  margin-left: 7px;
+}
+
+@media only screen and (max-width:768px){
+   .container{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+ }
+ .page{
+  height: auto;
+  width: 100%;
+  margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 0px;
+ } 
+
+
+ .img-container img{
+  width: 100%;
+ }
+
+ .prepare-section{
+  width: 50%;
+  
+ }
+ 
 }
 
   </style>
@@ -277,15 +312,15 @@
               <table class="nutrition-table">
                 <tr>
                   <td>Calories</td>
-                  <td>277kcal</td>
+                  <td id="tds">277kcal</td>
                 </tr>
                 <tr>
                   <td>Carbs</td>
-                  <td>og</td>
+                  <td id="tds">og</td>
                 </tr>
                 <tr>
                   <td>Protein</td>
-                  <td>20g</td>
+                  <td id="tds">20g</td>
                 </tr>
 
                 <tr>
