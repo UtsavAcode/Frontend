@@ -13,9 +13,12 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
+  <div id="app">
 
+  </div>
   FAQs
 
   What is Frontend Mentor, and how will it help me?
@@ -44,5 +47,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script>
+    const mountedApp = app.mount('#app')
+  </script>
 </body>
 </html>
