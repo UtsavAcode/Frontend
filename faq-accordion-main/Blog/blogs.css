@@ -1,8 +1,14 @@
-.containerss img{
+.image-sec{
     height: 10rem;
-    width: 100%;
-    object-fit: cover;
+    width: 30rem;
+
 }
+
+img{
+    width: 40rem;
+    object-fit: ;
+}
+
 
 .containerss{
     margin-top: 5rem;
