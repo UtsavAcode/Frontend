@@ -1,0 +1,21 @@
+.containerss img{
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerss{
+    margin-top: 5rem;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainPart{
+    background-color: rgb(177, 175, 175);
+    height: 30rem;
+    width: 40rem;
+    border-radius: 2%;
+}
