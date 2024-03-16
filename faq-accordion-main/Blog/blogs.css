@@ -1,13 +1,15 @@
 .image-sec{
     height: 10rem;
     width: 30rem;
-
+    margin: 2px;
+    border-radius: 5%;
+    
 }
 
 img{
     width: 40rem;
-    object-fit: ;
-}
+    height: 10rem;
+    }
 
 
 .containerss{
