@@ -1,5 +1,5 @@
 .view{
-    background-color: red;
+    background-color: antiquewhite;
     height: 100vh;
     width: 100vw;
     /* margin-left: 30vw; */
@@ -16,7 +16,7 @@
     height: 15rem;
     width: 100%;  
     overflow: hidden;
-    border-radius: 10px 10px 0 0;
+    /* border-radius: 10px 10px 0 0; */
 }
 
 .image-sec img{
@@ -29,12 +29,14 @@
 
 
 .mainPart{
-    background-color: rgb(243, 241, 241);
+    background-color: white;
     height: 30rem;
     width: 20rem;
     border-radius: 2%;
     margin: 10px;
-    padding:0;
+    overflow: hidden;
+    padding:0px;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .blog-title{
