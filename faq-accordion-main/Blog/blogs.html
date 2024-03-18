@@ -9,7 +9,8 @@
   </head>
   <body>
     
-<div class="container mb-1">
+<div class="view">
+    <div class="container mb-1">
     <div class="row justify-content-center">
         <div class="col-6">
           
@@ -35,7 +36,38 @@
                         <h2 class="blog-title">Html</h2>
                         <div class="auth-date">
                             <p class="ms-1">Author: Utsav Adhikari</p>
-                            <p>Published Date: 2070/09/09</p>
+                            <p class="me-3">Published Date: 2070/09/09</p>
+                        </div>
+
+                        <p class="ms-2">
+                          
+                                <span class="badge bg-secondary ms-1 me-1">Html</span>
+                           
+                        </p>
+
+                        <p class="blog-summary">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur veniam tempore ipsa quibusdam nulla minima laborum minus magni voluptatum commodi reiciendis, impedit vitae culpa aliquid expedita, dolorum esse dolorem nemo?
+                        </p>
+
+                        <a class="btn ms-2  btn-dark"
+                            asp-action="Index"
+                            asp-controller="Blog"
+                            asp-route-urlHandle="@blog.UrlHandle"
+                        >Read More</a>
+                    </div>
+            
+                    <div class="mainPart">
+                        <div class="image-sec">
+<img src="nature.jpg" alt="@blog.Heading"
+                         />
+                            
+                            
+                        </div>
+
+                        <h2 class="blog-title">Html</h2>
+                        <div class="auth-date">
+                            <p class="ms-1">Author: Utsav Adhikari</p>
+                            <p class="me-3">Published Date: 2070/09/09</p>
                         </div>
 
                         <p class="ms-2">
@@ -57,6 +89,7 @@
             
         
    
+</div>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
