@@ -5,26 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
         body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: row;
+        }
+        .sidebar{
+            background-color: rgb(18, 18, 18);
+            height: 100vh;
+            width: 20rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar ul{
+            margin-top: 0;
+            list-style: none;
+            text-decoration: none;
+            padding-left: 0px;
             display: flex;
             justify-content: center;
-            align-content:center;
-        }
-        .container{
-            height: 200px;
-            width: 200px;
-            background-color: red;
+            align-items: center;
+            flex-direction: column;
         }
 
-        .container:hover{
-            background-color: blue;
-            transition: 0.9s;
-            transform: scale(1.1);
+        ul a{
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 400px;
+            
+            
         }
+
+        a{
+            margin: 0px 3px 3px 0px ;
+            padding: 20px 0px 20px 0px ;
+            text-align: center;
+            color: white;
+            border-bottom: 1px solid rgb(243, 238, 238);
+            
+        }
+
+        a:hover{
+            color: rgb(6, 5, 5);
+            background-color: rgb(250, 247, 247);
+            transform: scale(1.1);
+            transition: trasform 0.19s;
+            border-radius: 5px;
+            font-weight: 600;
+            box-shadow: 5px 10px 8px #888888;
+        }
+
+        .heads h1{
+            color: white;
+            margin-top: 0;
+        }
+
+        .mainContent{
+            background-color: rgb(247, 245, 245);
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mainpart{
+            width: auto;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            height: 20rem;
+            background-color: white;
+            border: 2px solid rgb(73, 154, 73);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .image-section{
+            height: 20rem;
+            width: 20rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .image-section img{   
+            object-fit: cover;
+        }
+
+        .details-section{
+            margin-left: 5px;
+            padding: 5px;
+            background-color: white;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .details-section h1{
+            margin: 0;
+        }
+        
     </style>
 </head>
 <body>
-    <div class="container">Hello World</div>
+    
+   <div class="sidebar">
+    <div class="heads">
+        <h1>Bloggy</h1>
+    </div>
+    <ul>
+        <a href="">Add Tags</a>
+        <a href="">Add Blogs</a>
+        <a href="">Add Users</a>
+        <a href="">All Users</a>
+        <a href="">All Tags</a>
+    </ul>
+   </div>
+
+  <div class="mainContent">
+    <div class="mainpart">
+         <div class="image-section">
+            <img src="nature.jpg" alt="nature" >
+        </div>
+
+        <div class="details-section">
+            <h1>this is  the details section</h1>
+        </div>
+    </div>
+
+    <div class="mainpart">
+        <span>hello</span>
+    </div>
+
+    <div class="mainpart">
+       
+    </div>
+  </div>
+       
+        
+   
+</div>
+</div>
 </body>
 </html>
