@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body{
             margin: 0;
@@ -14,7 +15,7 @@
             align-items: row;
         }
         .sidebar{
-            background-color: rgb(18, 18, 18);
+            background-color: #252627;
             height: 100vh;
             width: 20rem;
             position: sticky;
@@ -25,12 +26,14 @@
             margin-top: 0;
             list-style: none;
             text-decoration: none;
-            padding-left: 0px;
+            padding-left: 10px;
+            padding-right: 10px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
             flex-direction: column;
         }
+
+
 
         ul a{
             text-decoration: none;
@@ -38,7 +41,7 @@
             height: 100%;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-weight: 400px;
-            
+
             
         }
 
@@ -48,17 +51,18 @@
             text-align: center;
             color: white;
             border-bottom: 1px solid rgb(243, 238, 238);
-            
+            font-size: 20px;
         }
 
         a:hover{
             color: rgb(6, 5, 5);
             background-color: rgb(250, 247, 247);
-            transform: scale(1.1);
+            transform: scaleY(1.2);
+            margin-top: 0;
             transition: trasform 0.19s;
             border-radius: 5px;
             font-weight: 600;
-            box-shadow: 5px 10px 8px #888888;
+            /* box-shadow: 5px 10px 8px #888888; */
         }
 
         .heads h1{
@@ -81,7 +85,7 @@
             border-radius: 10px;
             height: 20rem;
             background-color: white;
-            border: 2px solid rgb(73, 154, 73);
+            border: 1px solid rgb(8, 8, 8);
             display: flex;
             flex-direction: row;
         }
@@ -95,6 +99,8 @@
 
         .image-section img{   
             object-fit: cover;
+            height: 100%;
+            width: 100%;
         }
 
         .details-section{
@@ -115,6 +121,51 @@
             justify-content: space-between;
             
         }
+
+        .summary{
+            background-color: white;
+            height: 6rem;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tags{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .tags p {
+            padding:0px 5px 0 5px;
+            margin: 0 2px 0 0;
+            border-radius: 2px;
+            background-color: gray;
+            height: auto;
+            width: auto;
+        }
+
+        button{
+            margin-top: 5.1rem;
+            bottom: 0;
+            height: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            /* background-color: white;
+            color: black; */
+            font-weight: 500;
+            transform: scale(1.2);
+            transition: transform(.19s);
+            cursor:pointer;
+        }
+
+        .icons{
+           padding-right: 10px;
+        }
+       
         
     </style>
 </head>
@@ -125,8 +176,8 @@
         <h1>Bloggy</h1>
     </div>
     <ul>
-        <a href="">Add Tags</a>
-        <a href="">Add Blogs</a>
+        <a href=""><span class="icons"><i class="bi bi-tags"></i></span>Add Tags</a>
+        <a href=""><span class="icons"><i class="bi bi-journal"></i></span>Add Blogs</a>
         <a href="">Add Users</a>
         <a href="">All Users</a>
         <a href="">All Tags</a>
@@ -145,8 +196,14 @@
                 <p>Utsav Adhikari</p>
                 <p>2000/02/02</p>
             </div>
+            <div class="tags">
+                <p>html</p>
+                <p>css</p>
+            </div>
             <div class="summary">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro natus veritatis vero ut dolorem laboriosam voluptate sed omnis. Placeat consectetur corrupti ad aliquid similique repudiandae ab amet reiciendis totam nihil?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro natus veritatis vero ut dolorem laboriosam voluptate sed omnis. Placeat consectetur corrupti ad aliquid similique
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo omnis numquam quos. Magnam ut blanditiis quibusdam aliquam necessitatibus repellendus, ullam doloremque consectetur, vero sed molestiae voluptas? Fugit sit aliquam perferendis.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam consequuntur ullam expedita quia laudantium minus accusamus voluptates aperiam. Et porro iste voluptas vel magni inventore pariatur culpa asperiores harum nulla. repudiandae ab amet reiciendis totam nihil?</p>
             </div>
 
             <button>Read More</button>
@@ -154,12 +211,56 @@
     </div>
 
     <div class="mainpart">
-        <span>hello</span>
+         <div class="image-section">
+            <img src="nature.jpg" alt="nature" >
+        </div>
+
+        <div class="details-section">
+            <h1>this is  the details section</h1>
+            <div class="auth">
+                <p>Utsav Adhikari</p>
+                <p>2000/02/02</p>
+            </div>
+            <div class="tags">
+                <p>html</p>
+                <p>css</p>
+            </div>
+            <div class="summary">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro natus veritatis vero ut dolorem laboriosam voluptate sed omnis. Placeat consectetur corrupti ad aliquid similique
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo omnis numquam quos. Magnam ut blanditiis quibusdam aliquam necessitatibus repellendus, ullam doloremque consectetur, vero sed molestiae voluptas? Fugit sit aliquam perferendis.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam consequuntur ullam expedita quia laudantium minus accusamus voluptates aperiam. Et porro iste voluptas vel magni inventore pariatur culpa asperiores harum nulla. repudiandae ab amet reiciendis totam nihil?</p>
+            </div>
+
+            <button>Read More</button>
+        </div>
     </div>
 
     <div class="mainpart">
-       
+         <div class="image-section">
+            <img src="nature.jpg" alt="nature" >
+        </div>
+
+        <div class="details-section">
+            <h1>this is  the details section</h1>
+            <div class="auth">
+                <p>Utsav Adhikari</p>
+                <p>2000/02/02</p>
+            </div>
+            <div class="tags">
+                <p>html</p>
+                <p>css</p>
+            </div>
+            <div class="summary">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro natus veritatis vero ut dolorem laboriosam voluptate sed omnis. Placeat consectetur corrupti ad aliquid similique
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo omnis numquam quos. Magnam ut blanditiis quibusdam aliquam necessitatibus repellendus, ullam doloremque consectetur, vero sed molestiae voluptas? Fugit sit aliquam perferendis.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam consequuntur ullam expedita quia laudantium minus accusamus voluptates aperiam. Et porro iste voluptas vel magni inventore pariatur culpa asperiores harum nulla. repudiandae ab amet reiciendis totam nihil?</p>
+            </div>
+
+            <button>Read More</button>
+        </div>
     </div>
+
+    
   </div>
        
         
