@@ -10,6 +10,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+
+        }
+
+        .below-content{
             display: flex;
             justify-content: space-between;
             align-items: row;
@@ -17,13 +21,13 @@
         .sidebar{
             background-color: #252627;
             height: 100vh;
-            width: 20rem;
-            position: sticky;
-            top: 0;
+            width: 16rem;
+            position: fixed;
+            top: 4rem; 
         }
 
         .sidebar ul{
-            margin-top: 0;
+            margin-top: 3rem;
             list-style: none;
             text-decoration: none;
             padding-left: 10px;
@@ -71,17 +75,19 @@
         }
 
         .mainContent{
-            background-color: rgb(247, 245, 245);
+            background-color: white;
             width: 100%;
             height: auto;
             display: flex;
             flex-direction: column;
+            margin-top: 5rem;
         }
 
         .mainpart{
             width: auto;
             padding: 10px;
             margin: 10px;
+            margin-left: 17rem;
             border-radius: 10px;
             height: 20rem;
             background-color: white;
@@ -169,16 +175,26 @@
         .new{
             padding-left: 15px;
         }
+        .navbar{
+            position: fixed;
+            top: 0;
+            height: 4rem;
+            width: 100%;
+            background-color: black;
+        }
        
         
     </style>
 </head>
 <body>
     
-   <div class="sidebar">
-    <div class="heads">
+    <div class="navbar">
+         <div class="heads">
         <h1>Bloggy</h1>
     </div>
+    </div>
+<div class="below-content">
+       <div class="sidebar">
     <ul>
         <a href=""><span class="new"><span class="icons"><i class="bi bi-tags"></i></span>Add Tags</span></a>
         <a href=""><span class="new"><span class="icons"><i class="bi bi-journal"></i></span>Add Blogs</span></a>
@@ -266,6 +282,7 @@
 
     
   </div>
+</div>
        
         
    
