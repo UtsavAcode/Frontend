@@ -24,7 +24,9 @@
             width: 16rem;
             position: fixed;
             top: 4rem; 
-            box-shadow: 5px 10px 8px #888888;
+            /* box-shadow: 5px 10px 8px #888888;
+             */
+             border-right: 1px solid rgb(235, 232, 232);
         }
 
         .sidebar ul{
@@ -173,11 +175,11 @@
         }
 
         .icons{
-           padding-right: 15px;
+           padding-right: 9px;
         }
 
         .new{
-            padding-left: 15px;
+
         }
         .navbar{
             position: sticky;
@@ -192,8 +194,32 @@
         }
        
     .mainpart:hover{
-        box-shadow: 1px 1px 10px  rgb(219, 19, 19);
+        box-shadow: 1px 1px 10px  rgb(87, 85, 85);
     }    
+
+@media only screen and (max-width: 768px){
+
+    .sidebar{
+        width: 5rem;
+    }
+    .new{
+        display: none;
+    }
+
+    .icons{
+        font-size: 30px;
+        padding-left: 10px;
+    }
+
+    .mainpart{
+      margin: 5px 5px 0 90px;
+    }
+
+    .mainpart .image-section{
+        height: ;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -207,11 +233,11 @@
 <div class="below-content">
        <div class="sidebar">
     <ul>
-        <a href=""><span class="new"><span class="icons"><i class="bi bi-tags"></i></span>Add Tags</span></a>
-        <a href=""><span class="new"><span class="icons"><i class="bi bi-journal"></i></span>Add Blogs</span></a>
-        <a href=""><span class="new"><span class="icons"><i class="bi bi-person-add"></i></span>Add Users</span></a>
-        <a href=""><span class="new"><span class="icons"><i class="bi bi-person-lines-fill"></i></span>All Users</span></a>
-        <a href=""><span class="new"><span class="icons"><i class="bi bi-card-checklist"></i></span>All Tags</span></a>
+        <a href=""><span class="icons"><i class="bi bi-tags"></i></span><span class="new">Add Tags</span></a>
+        <a href=""><span class="icons"><i class="bi bi-journal"></i></span><span class="new">Add Blogs</span></a>
+        <a href=""><span class="icons"><i class="bi bi-person-add"></i></span><span class="new">Add Users</span></a>
+        <a href=""><span class="icons"><i class="bi bi-person-lines-fill"></i></span><span class="new">All Users</span></a>
+        <a href=""><span class="icons"><i class="bi bi-card-checklist"></i></span><span class="new">All Tags</span></a>
     </ul>
    </div>
 
