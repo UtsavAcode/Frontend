@@ -190,12 +190,19 @@
             backdrop-filter: blur(5px);
             z-index: 10;
             border-bottom: 1px solid rgb(235, 232, 232);
-    
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
        
     .mainpart:hover{
         box-shadow: 1px 1px 10px  rgb(87, 85, 85);
     }    
+
+      .notify{
+        padding: 7px 20px 0px 0px;
+        font-size: 20px;
+    }
 
 @media only screen and (max-width: 768px){
 
@@ -242,6 +249,17 @@
     .mainpart button{
         margin-top: 9px;
     }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .notify{
+        padding: 7px;
+        font-size: 20px;
+    }
 }
 
     </style>
@@ -251,12 +269,13 @@
     
     <div class="navbar">
          <div class="heads">
-        <h1>Bloggy</h1>
-    </div>
+            <h1>Bloggy</h1>
+        </div>
     </div>
 <div class="below-content">
        <div class="sidebar">
     <ul>
+        <a href=""><span class="icons"><i class="bi bi-bell-fill"></i></span><span class="new">New User</span></a>
         <a href=""><span class="icons"><i class="bi bi-tags"></i></span><span class="new">Add Tags</span></a>
         <a href=""><span class="icons"><i class="bi bi-journal"></i></span><span class="new">Add Blogs</span></a>
         <a href=""><span class="icons"><i class="bi bi-person-add"></i></span><span class="new">Add Users</span></a>
@@ -351,3 +370,17 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
