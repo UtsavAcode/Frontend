@@ -15,14 +15,56 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--Light-pink);
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-size:100 300px
+    
+}
+
+.container{
+  background-color: var(--Light-pink);
+  width: 100%;
+  margin: 200px 0px 0px 0px;
+  height: 31.45rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  /* background-color: var(--White); */
+  background-color: red;
+  width: 30%;
+  border-radius: 10px;
+  height: 20rem;
+  z-index: 20;
+}
+
   </style>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-  <div id="app">
 
-  </div>
-  FAQs
+  <div class="container">
+   <div class="card">
+     FAQs
 
   What is Frontend Mentor, and how will it help me?
 
@@ -45,11 +87,14 @@
   The best place to get help is inside Frontend Mentor's Discord community. There's a help 
   channel where you can ask questions and seek support from other community members.
 
+   </div>
   
-  <div class="attribution">
+  </div>
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 
   <script>
     const mountedApp = app.mount('#app')
