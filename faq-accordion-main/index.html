@@ -29,91 +29,103 @@
     box-sizing: border-box;
 }
 
-
-
 body{
     font-family: "Work Sans", sans-serif;
     background-color: var(--Light-pink);  
 }
 
-/* Media query for desktop screens */
-@media screen and(min-width: 376px){
-.bg-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('./assets/images/background-pattern-mobile.svg');
-}
+
+.bg-image{
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  height: 16.99rem;
 }
 
-@media screen and (min-width: 1441px) {
-  .bg-image{
-    height: 10px;
-  }
+.container{
 
-  .card{
-    background-color: blue;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26rem;
 }
-    
-.bg-image {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('./assets/images/background-pattern-mobile.svg');
-}
-
-
-
 .card{
-  /* background-color: var(--White); */
-  background-color: red;
-  width: 30%;
+  position: fixed;
+  top: calc(8rem + 5px); 
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--White);
+  padding: 28px;
+  height: 30rem;
+  width: 33rem;
   border-radius: 10px;
-  height: 20rem;
-  z-index: 20;
+  box-shadow: 2px 1px 30px 0 rgb(179, 171, 171);
 }
+
+.card-header{
+  padding-top: 17px;
+}
+
+.card-header p{
+  font-size: 59px;
+  font-weight: 700;
+  color: var(--Dark-purple);
+  padding: 0px 0px 2px 0px;
+}
+
+.list-item{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Dark-purple);
+  padding: 10px 6px 10px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 
   </style>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
   <div class="bg-image"></div>
-<div class="card">
-     FAQs
 
-  What is Frontend Mentor, and how will it help me?
+   
+  <div class="container">
+   
+  <div class="card">
+    <div class="card-header">
+      <p> <img src="assets/images/icon-star.svg" alt="" > FAQs</p>
+    </div>
 
+    <div class="list">
+      <p class="list-item"> What is Frontend Mentor, and how will it help me?<span><img src="assets/images/icon-plus.svg" ></span></p>
+      <p class="list-item">Is Frontend Mentor free?<span><img src="assets/images/icon-plus.svg" ></span></p>
+      <p class="list-item">Can I use Frontend Mentor projects in my portfolio?<span><img src="assets/images/icon-plus.svg" ></span></p>
+      <p class="list-item"> How can I get help if I'm stuck on a challenge?<span><img src="assets/images/icon-plus.svg" ></span></p>
+      
+    </div>
+<!-- 
   Frontend Mentor offers realistic coding challenges to help developers improve their 
   frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
   all levels and ideal for portfolio building.
 
-  Is Frontend Mentor free?
+  
 
   Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
   option providing access to a range of projects suitable for all skill levels.
 
-  Can I use Frontend Mentor projects in my portfolio?
+  
 
   Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
   way to showcase your skills to potential employers!
 
-  How can I get help if I'm stuck on a Frontend Mentor challenge?
+ 
   
   The best place to get help is inside Frontend Mentor's Discord community. There's a help 
   channel where you can ask questions and seek support from other community members.
-
+ -->
    </div>
-   
-  <div class="container">
-   
-  
   </div>
   
   <!-- <div class="attribution">
