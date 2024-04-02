@@ -54,7 +54,7 @@ body{
   transform: translateX(-50%);
   background-color: var(--White);
   padding: 28px;
-  height: 30rem;
+  height: auto;
   width: 33rem;
   border-radius: 10px;
   box-shadow: 2px 1px 30px 0 rgb(179, 171, 171);
@@ -75,32 +75,80 @@ body{
   font-size: 16px;
   font-weight: 600;
   color: var(--Dark-purple);
-  padding: 10px 6px 10px 6px;
+  padding: 10px 6px 15px 6px; /* Adjusted padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--Light-pink);
 }
 
 .list-item:hover{
   color: #AD28EB;
   cursor: pointer;
 }
+
 .list-item img:hover{
- transform: rotate(90deg);
+ transform: rotate(180deg);
  transition: transform 0.3s ease; 
 }
 
 .card-header img:hover{
-   transform: rotate(90deg);
+   transform: rotate(180deg);
  transition: transform 0.3s ease;
 }
 
+.answers{
+  color: var(--Grayish-purple);
+  display: none;
+  transition: 2s ease-in-out;
+  opacity: 0;
+  padding: 10px 6px 20px 6px;
+}
 
+.answers.active{
+  display: block;
+  opacity: 1;
+  border-bottom: 2px solid var(--Light-pink); 
+}
 
-
+.list-item.active {
+  border-bottom: 2px solid white; /* Moved border here */
+}
+@media screen and(max-width:375px){
+  .container,.card{
+    width: auto;
+  }
+}
   </style>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+
+   <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const listItems = document.querySelectorAll('.list-item');
+
+      listItems.forEach((listItem, index) => {
+        const answer = listItem.nextElementSibling;
+        const plusIcon = listItem.querySelector('img');
+
+        listItem.addEventListener('click', () => {
+         
+          document.querySelectorAll('.answers.active').forEach(activeAnswer => {
+            if (activeAnswer !== answer) {
+              activeAnswer.classList.remove('active');
+              activeAnswer.previousElementSibling.classList.remove('active');
+              activeAnswer.previousElementSibling.querySelector('img').src = "assets/images/icon-plus.svg";
+            }
+          });
+
+      
+          const isActive = answer.classList.toggle('active');
+          listItem.classList.toggle('active');
+          plusIcon.src = isActive ? "assets/images/icon-minus.svg" : "assets/images/icon-plus.svg";
+        });
+      });
+    });
+  </script>
+
+  
 </head>
 <body>
   <div class="bg-image"></div>
@@ -115,30 +163,43 @@ body{
 
     <div class="list">
       <p class="list-item"> What is Frontend Mentor, and how will it help me?<span><img src="assets/images/icon-plus.svg" ></span></p>
-      <p class="list-item">Is Frontend Mentor free?<span><img src="assets/images/icon-plus.svg" ></span></p>
-      <p class="list-item">Can I use Frontend Mentor projects in my portfolio?<span><img src="assets/images/icon-plus.svg" ></span></p>
-      <p class="list-item"> How can I get help if I'm stuck on a challenge?<span><img src="assets/images/icon-plus.svg" ></span></p>
+      <p class="answers">
+           Frontend Mentor offers realistic coding challenges to help developers improve their 
+            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+            all levels and ideal for portfolio building.
+      </p>
+      <p class="list-item">Is Frontend Mentor free?<span><img src="assets/images/icon-plus.svg" ></span>
+        <p class="answers">
+          Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+           option providing access to a range of projects suitable for all skill levels.
+
+        </p>
+      </p>
+      <p class="list-item">Can I use Frontend Mentor projects in my portfolio?<span><img src="assets/images/icon-plus.svg" ></span>
+        <p class="answers">       
+          Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!
+        </p>
+      </p>
+      <p class="list-item"> How can I get help if I'm stuck on a challenge?<span><img src="assets/images/icon-plus.svg" ></span>
+          <p class="answers">
+              The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+              channel where you can ask questions and seek support from other community members.
+          </p>
+      </p>
       
     </div>
 <!-- 
-  Frontend Mentor offers realistic coding challenges to help developers improve their 
-  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-  all levels and ideal for portfolio building.
+ 
 
   
 
-  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-  option providing access to a range of projects suitable for all skill levels.
-
   
-
-  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-  way to showcase your skills to potential employers!
+  
 
  
   
-  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-  channel where you can ask questions and seek support from other community members.
+
  -->
    </div>
   </div>
@@ -146,10 +207,4 @@ body{
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-
-  <script>
-    const mountedApp = app.mount('#app')
-  </script>
-</body>
-</html>
+  </div
