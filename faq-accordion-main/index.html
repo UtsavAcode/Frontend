@@ -79,6 +79,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+ border-bottom: 2px solid var(--Light-pink); 
 }
 
 .list-item:hover{
@@ -113,9 +114,47 @@ body{
 .list-item.active {
   border-bottom: 2px solid white; /* Moved border here */
 }
-@media screen and(max-width:375px){
+@media only screen and (max-width: 375px){
+
+  body{
+    height: 100vh;
+  }
+
+  .bg-image{
+    height: 12rem;
+  }
+
   .container,.card{
-    width: auto;
+    width: 20rem;
+  }
+
+  .card{
+    overflow: scroll;
+    top: calc(6rem + 5px); 
+    padding-top: 20px;
+  }
+  
+
+  .card-header{
+    padding-top: 0;
+  }
+
+  .card-header p{
+      font-size: 30px;
+      font-weight: 700;
+      padding: 0px 0px 2px 0px;
+      display: flex;
+      align-items: center;
+  }
+
+  .card-header p img{
+    height: 26px;
+    padding-right: 15px;
+  }
+
+  .answers{
+    padding-top: 0px;
+    font-size: 13px;
   }
 }
   </style>
